@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>ERwebCarpentry</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="1d3e4363-524e-4f79-8c58-7e9a962545ce" name="chantier" objectType="TABLE" physicalName="chantier" >
+   <remarks></remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="a0267402-e617-43ee-89ba-10bf338c83b4" autoIncrement="true" autoIncrementSequenceName="chantier_chantier_id_seq" defaultValue="" name="chantier_id" nullable="0" physicalName="chantier_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="29349627-e8d6-4cb4-a429-30b2fbb3fff8" autoIncrement="true" autoIncrementSequenceName="chantier_date_seq" defaultValue="" name="date" nullable="0" physicalName="date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="8a9bcf51-9919-4f83-a609-9d58a9dbfb86" autoIncrement="false" autoIncrementSequenceName="chantier_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="90" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="981a25cf-3d82-4019-a062-d04a80273d72" autoIncrement="false" autoIncrementSequenceName="chantier_short_description_seq" defaultValue="" name="short_description" nullable="0" physicalName="short_description" precision="250" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="a41216fa-8ecd-4126-8e4b-5c6ba39e260c" autoIncrement="false" autoIncrementSequenceName="chantier_localisation_seq" defaultValue="" name="localisation" nullable="0" physicalName="localisation" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX7" populated="true" UUID="ec4c557e-b891-41a3-88f0-92aa6f8443b8" clustered="false" name="chantier_pk" physicalName="chantier_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC8" populated="true" UUID="bce1f3ca-1c90-47bb-b848-2bf77ef5aaaf" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="chantier_id" physicalName="chantier_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB9" populated="true" UUID="3c80ca8b-6e65-42be-9f6e-fafcd35f887a" name="categories" objectType="TABLE" physicalName="categories" >
+   <remarks></remarks>
+   <folder id="FOLTAB91" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL10" populated="true" UUID="601cdb15-43b6-4109-9124-6b699eb5738a" autoIncrement="true" autoIncrementSequenceName="categories_category_id_seq" defaultValue="" name="category_id" nullable="0" physicalName="category_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL11" populated="true" UUID="f170f537-b641-4ee6-bb0d-10e59e9a8723" autoIncrement="false" autoIncrementSequenceName="categories_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="40" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL12" populated="true" UUID="4cbb4968-10dc-4367-971d-a029fa9fd7f7" autoIncrement="false" autoIncrementSequenceName="categories_logo_seq" defaultValue="" name="logo" nullable="0" physicalName="logo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2004" userDefinedTypeUUID="5c50e616-a448-40e1-abcd-5bfc04dcc607" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB93" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB92" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB94" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX13" populated="true" UUID="00ad0358-f7b6-45b2-9969-ec6d2e57c3ed" clustered="false" name="categories_pk" physicalName="categories_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC14" populated="true" UUID="e1391050-b5a6-4ad1-b20d-432782faa7a4" ascendingOrDescending="UNSPECIFIED" column-ref="COL10" name="category_id" physicalName="category_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB15" populated="true" UUID="cd0f7f97-17fa-4647-8a26-2f56612afa3f" name="photographies" objectType="TABLE" physicalName="photographies" >
+   <remarks></remarks>
+   <folder id="FOLTAB151" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL16" populated="true" UUID="b02df755-3fb8-4468-a41c-8615bbcc55de" autoIncrement="true" autoIncrementSequenceName="photographies_photo_id_seq" defaultValue="" name="photo_id" nullable="0" physicalName="photo_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="64456c3a-f408-4240-9490-a9aa191114f4" autoIncrement="false" autoIncrementSequenceName="chantier_chantier_id_seq" defaultValue="" name="chantier_id" nullable="0" physicalName="chantier_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL18" populated="true" UUID="6cf8f64d-a69c-467c-aef0-6dd933a0fff5" autoIncrement="false" autoIncrementSequenceName="photographies_original_photo_seq" defaultValue="" name="original_photo" nullable="0" physicalName="original_photo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2004" userDefinedTypeUUID="5c50e616-a448-40e1-abcd-5bfc04dcc607" >
+     <remarks></remarks>
+    </column>
+    <column id="COL19" populated="true" UUID="baa1c2ff-a222-4187-bf8e-9b63bff45b4e" autoIncrement="false" autoIncrementSequenceName="photographies_thumbnailPhoto_seq" defaultValue="" name="thumbnailPhoto" nullable="0" physicalName="thumbnailPhoto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2004" userDefinedTypeUUID="5c50e616-a448-40e1-abcd-5bfc04dcc607" >
+     <remarks></remarks>
+    </column>
+    <column id="COL20" populated="true" UUID="39888577-7bd2-4929-9c32-c7a1d1abc3dc" autoIncrement="false" autoIncrementSequenceName="photographies_numerInSerie_seq" defaultValue="" name="numerInSerie" nullable="0" physicalName="numerInSerie" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB153" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB152" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB154" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX21" populated="true" UUID="7b6d7f7c-aeb7-4c2d-89da-7d55f763572c" clustered="false" name="photographies_pk" physicalName="photographies_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC22" populated="true" UUID="2cb3c49c-b79f-4b50-bd25-550f5277364c" ascendingOrDescending="UNSPECIFIED" column-ref="COL16" name="photo_id" physicalName="photo_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB23" populated="true" UUID="2a61ff34-6957-4585-9525-16f7ba8c1f6a" name="essences" objectType="TABLE" physicalName="essences" >
+   <remarks></remarks>
+   <folder id="FOLTAB231" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL24" populated="true" UUID="22de8ba1-e5c8-43ae-ae84-07e1bb6589f2" autoIncrement="true" autoIncrementSequenceName="essences_essence_id_seq" defaultValue="" name="essence_id" nullable="0" physicalName="essence_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL25" populated="true" UUID="bd7cf763-8329-4ef9-8587-5fd378c48e51" autoIncrement="false" autoIncrementSequenceName="essences_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB233" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB232" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB234" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX26" populated="true" UUID="099ba282-6a9a-4821-a30f-e6f5cdedea1a" clustered="false" name="essences_pk" physicalName="essences_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC27" populated="true" UUID="03410668-7efb-446a-b1b5-fb586477ee23" ascendingOrDescending="UNSPECIFIED" column-ref="COL24" name="essence_id" physicalName="essence_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB28" populated="true" UUID="b074b782-9600-4252-8bc4-94906b4cb052" name="chantier_as_categores" objectType="TABLE" physicalName="chantier_as_categores" >
+   <remarks></remarks>
+   <folder id="FOLTAB281" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL29" populated="true" UUID="29f76b86-6a7e-47d8-b6c8-16a31c7a575b" autoIncrement="false" autoIncrementSequenceName="chantier_chantier_id_seq" defaultValue="" name="chantier_id" nullable="0" physicalName="chantier_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL30" populated="true" UUID="9ae6124b-6b3b-4efc-a7ef-0c54a2be6613" autoIncrement="false" autoIncrementSequenceName="categories_category_id_seq" defaultValue="" name="category_id" nullable="0" physicalName="category_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB283" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB282" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB284" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX31" populated="true" UUID="8b5bd771-830c-42b2-a3b9-42c5785320b1" clustered="false" name="chantier_as_categores_pk" physicalName="chantier_as_categores_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC32" populated="true" UUID="f0758497-f8cf-46fa-b241-b546ae685bc9" ascendingOrDescending="UNSPECIFIED" column-ref="COL29" name="chantier_id" physicalName="chantier_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB33" populated="true" UUID="c8a42305-6e3a-4d60-ba78-e8b66af3e274" name="chantier_as_essences" objectType="TABLE" physicalName="chantier_as_essences" >
+   <remarks></remarks>
+   <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL34" populated="true" UUID="9e933267-8176-4f71-83ce-918f544de7d2" autoIncrement="false" autoIncrementSequenceName="chantier_chantier_id_seq" defaultValue="" name="chantier_id" nullable="0" physicalName="chantier_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="d38bcfa0-30ac-4773-a142-fe87fb54f942" autoIncrement="false" autoIncrementSequenceName="essences_essence_id_seq" defaultValue="" name="essence_id" nullable="0" physicalName="essence_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB333" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB332" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB334" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX36" populated="true" UUID="5065d1f4-1f1a-4634-bda1-25f472ab36ef" clustered="false" name="chantier_as_essences_pk" physicalName="chantier_as_essences_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC37" populated="true" UUID="b9aee21e-9c91-4789-8b58-5c1223f76400" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="chantier_id" physicalName="chantier_id" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL38" populated="true" UUID="ae8b87fb-d034-41a6-829b-500b662ef896" deferrability="7" deleteRule="3" fk-table-ref="TAB15" fkCardinality="7" identifying="false" name="chantier_photographies_fk" physicalName="chantier_photographies_fk" pk-table-ref="TAB1" pkCardinality="6" updateRule="3" >
+    <column-mapping id="CMP39" populated="true" UUID="a0831981-5205-4f82-85b6-ce4decb7a938" fk-column-ref="COL17" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL40" populated="true" UUID="1f2781a4-7aec-4587-9caf-52f03f434e28" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="true" name="chantier_chantier_as_categores_fk" physicalName="chantier_chantier_as_categores_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP41" populated="true" UUID="2d308fab-68ca-4283-9916-69dc61549b27" fk-column-ref="COL29" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL42" populated="true" UUID="7ed00e39-eb94-4447-93d2-af1965574f4e" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="true" name="chantier_chantier_as_essences_fk" physicalName="chantier_chantier_as_essences_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP43" populated="true" UUID="41142e81-6a50-4279-b77b-f4c2f2874cd1" fk-column-ref="COL34" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL44" populated="true" UUID="49755369-f72b-48e2-9398-ef40f19b808d" deferrability="7" deleteRule="3" fk-table-ref="TAB28" fkCardinality="7" identifying="false" name="categories_chantier_as_categores_fk" physicalName="categories_chantier_as_categores_fk" pk-table-ref="TAB9" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP45" populated="true" UUID="28fd9077-9a1c-44da-9cdc-a89132139ab3" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL10" />
+   </relationship>
+   <relationship id="REL46" populated="true" UUID="44b02b1a-deb3-4d5a-acb8-9d0f2a8d64f1" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="false" name="essences_chantier_as_essences_fk" physicalName="essences_chantier_as_essences_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP47" populated="true" UUID="15bcf078-4837-4461-adcb-120cd2fbb683" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL24" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="592" y="303" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB9" x="276" y="250" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB15" x="990" y="267" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB23" x="264" y="464" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB28" x="518" y="144" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB33" x="600" y="501" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL38" pkConnection="0.3939393939393939" fkConnection="0.5858585858585859" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL40" pkConnection="0.39555555555555555" fkConnection="0.5445544554455446" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL44" pkConnection="0.88" fkConnection="0.19306930693069307" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL42" pkConnection="0.49333333333333335" fkConnection="0.5" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL46" pkConnection="0.6842105263157895" fkConnection="0.2982456140350877" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
