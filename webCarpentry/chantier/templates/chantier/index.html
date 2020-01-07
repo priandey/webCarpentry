@@ -42,7 +42,7 @@
 
   <header class="header-bar d-flex d-lg-block align-items-center" data-aos="fade-left">
     <div class="site-logo">
-      <a href="#top">Léo Milliard</a>
+      <a href="{% url 'home' %}#top">Léo Milliard</a>
     </div>
     
     <div class="d-inline-block d-xl-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
@@ -51,7 +51,7 @@
       <ul class="js-clone-nav">
         <li class="active"><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'bio' %}">Bio</a></li>
-        <li><a href="chantier/contact.html">Contact</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -60,7 +60,7 @@
     <div class="container-fluid photos">
       <div class="row align-items-stretch" id="top">
         {% for chantier in chantiers %}
-        <div class="col-6 col-md-6 col-lg-{% random_int 3 6 %}" data-aos="fade-up">
+        <div class="col-6 col-md-6 col-lg-{% cycle 5 6 4 4 3 3 3 %}" data-aos="fade-up">
           <a href="{% url 'chantier' chantier.pk %}" class="d-block photo-item">
             <img src="{{ chantier.main_picture.url }}" alt="{{ chantier.name }}" class="img-fluid">
             <div class="photo-text-more">
@@ -81,7 +81,7 @@
         <div class="col-md-12 text-center py-5">
           <p>
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <a href="/admin/">Admin</a> | Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Template by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <a href="/admin/">Admin</a> | Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Back-end by <a href="http://priandey.eu">P.Riandey</a> | Template by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
       </p>
         </div>

@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse
 from .models import Chantier
 
 
@@ -13,4 +15,18 @@ def chantier(request, pk):
 
 def bio(request):
     return render(request, 'chantier/bio.html', locals())
+
+def contact(request):
+    return render(request, 'chantier/contact.html')
+
+def send_email(request):
+    if request.method == "POST":
+        subject = request.POST['subject'] + " - " + request.POST['fname'] + ' ' + request.POST['lname']
+        message = request.POST['message']
+        from_email = request.POST['email']
+        try:
+            send_mail(subject, message, from_email, ["leo10e9@gmail.com"])
+        except BadHeaderError:
+            return HttpResponse("Invalid Header Found.")
+        return redirect("home")
 
