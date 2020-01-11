@@ -1,3 +1,8 @@
 .idea/
 db.sqlite3
 .env
+webCarpentry/chantier/__pycache__/
+webCarpentry/webCarpentry/settings/prod.py
+webCarpentry/webCarpentry/staticfiles
+
+

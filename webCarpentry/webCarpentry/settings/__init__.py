@@ -120,4 +120,3 @@ EMAIL_USE_TLS = False
 EMAIL_HOST = "SSL0.OVH.NET"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "contact@leocharpente.fr"
-EMAIL_HOST_PASSWORD = os.environ.get("MAIL_PASSWORD")

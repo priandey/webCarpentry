@@ -5,14 +5,14 @@
 
       <div class="row pt-4 mb-5 text-center">
         <div class="col-12">
-          <h2 class="text-white mb-4">{{ chantier.name }} &mdash; {{ chantier.date_of_work }}</h2>
-          <p>{{ chantier.description }}</p>
+		<h2 class="text-white mb-4">{{ chantier.name }} &mdash; {{ chantier.date_of_work|date:'F Y' }}</h2>
+		{% autoescape off %} <p>{{ chantier.description }}</p>{% endautoescape %}
         </div>
       </div>
 
       <div class="row align-items-stretch">
 
-        {% for photo in chantier.pictures.all %}
+        {% for photo in all_pictures %}
         <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up">
           <a href="{{ photo.picture.url }}" class="d-block photo-item" data-fancybox="gallery">
             <img src="{{ photo.picture.url }}" alt="{{chantier.name}}" class="img-fluid">
