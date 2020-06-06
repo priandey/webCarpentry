@@ -14,11 +14,14 @@ def chantier(request, pk):
     all_pictures = Picture.objects.filter(chantier=chantier).order_by('pk')
     return render(request, 'chantier/single.html', locals())
 
+
 def bio(request):
     return render(request, 'chantier/bio.html', locals())
 
+
 def contact(request):
     return render(request, 'chantier/contact.html')
+
 
 def send_email(request):
     if request.method == "POST":

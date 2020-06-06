@@ -6,7 +6,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'webcarpentry',
-        'USER': 'postgres',
+        'USER': 'webcarpenter',
         'PASSWORD': 'pitour',
         'HOST': 'localhost',
         'PORT': '',
