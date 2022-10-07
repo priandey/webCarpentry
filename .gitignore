@@ -4,5 +4,9 @@ db.sqlite3
 webCarpentry/chantier/__pycache__/
 webCarpentry/webCarpentry/settings/prod.py
 webCarpentry/webCarpentry/staticfiles
-
-
+access.log
+error.log
+webCarpentry/__init__.py
+webCarpentry/access.log
+webCarpentry/webcarpentry.json
+*.pyc
