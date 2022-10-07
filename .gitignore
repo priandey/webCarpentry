@@ -10,3 +10,4 @@ webCarpentry/__init__.py
 webCarpentry/access.log
 webCarpentry/webcarpentry.json
 *.pyc
+Pipfile.lock
