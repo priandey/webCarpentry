@@ -44,7 +44,7 @@ class Picture(models.Model):
         img.thumbnail((6000, 300))
         thumbnail_io = BytesIO()
         img.save(thumbnail_io, 'JPEG', quality=85)
-        return File(thumbnail_io, name=get_random_string())
+        return File(thumbnail_io, name=get_random_string(length=70))
 
     def save(self, *args, **kwargs):
         self.thumbnail = self.thumbnailify()
@@ -52,6 +52,7 @@ class Picture(models.Model):
 
     def __str__(self):
         return str(self.pk)
+
 
 @receiver(post_delete, sender=Picture)
 def submission_delete(sender, instance, **kwargs):
