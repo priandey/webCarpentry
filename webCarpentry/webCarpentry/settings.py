@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
-from . import *
+from .settings import *
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -33,8 +33,8 @@ DATABASES = {
         'NAME': os.getenv("DB_NAME"),
         'USER': os.getenv("DB_USER"),
         'PASSWORD': os.getenv("DB_PWD"),
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': os.getenv("DB_HOST"),
+        'PORT': os.getenv("DB_PORT"),
     }
 }
 
