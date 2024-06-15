@@ -45,7 +45,10 @@ DATABASES = {
 SECRET_KEY = '&nj!6wn2j-gjo90z^hsa#so866f)d+a0piu!&ovaltgnwwo#nw'
 
 ALLOWED_HOSTS = ["localhost", "0.0.0.0", "leocharpente.fr", "www.leocharpente.fr"]
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://leocharpente.fr",
+    "https://www.leocharpente.fr",
+]
 # Application definition
 
 INSTALLED_APPS = [
