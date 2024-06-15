@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+from . import *
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,6 +25,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+DEBUG = False
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PWD"),
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+SECRET_KEY = '&nj!6wn2j-gjo90z^hsa#so866f)d+a0piu!&ovaltgnwwo#nw'
+
+ALLOWED_HOSTS = ["localhost", "leocharpente.fr", "www.leocharpente.fr"]
 
 # Application definition
 
@@ -70,8 +87,6 @@ WSGI_APPLICATION = 'webCarpentry.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-
 
 
 # Password validation
