@@ -15,23 +15,23 @@ def chantier(request, pk):
     return render(request, 'chantier/single.html', locals())
 
 
-# def bio(request):
-#     return render(request, 'chantier/bio.html', locals())
+def bio(request):
+    return render(request, 'chantier/bio.html', locals())
 
 
-# def contact(request):
-#     return render(request, 'chantier/contact.html')
+def contact(request):
+    return render(request, 'chantier/contact.html')
 
 
-# def send_email(request):
-#     if request.method == "POST":
-#         subject = request.POST['subject'] + " - " + request.POST['fname'] + ' ' + request.POST['lname']
-#         message = request.POST['message']
-#         from_email = request.POST['email']
-#         try:
-#             send_mail(subject, message, from_email, ["riandeypierre@gmail.com"])
-#         except BadHeaderError:
-#             return HttpResponse("Invalid Header Found.")
-#         return redirect("home")
-#     else:
-#         return HttpResponse("No Post Request")
+def send_email(request):
+    if request.method == "POST":
+        subject = request.POST['subject'] + " - " + request.POST['fname'] + ' ' + request.POST['lname']
+        message = request.POST['message']
+        from_email = request.POST['email']
+        try:
+            send_mail(subject, message, from_email, ["riandeypierre@gmail.com"])
+        except BadHeaderError:
+            return HttpResponse("Invalid Header Found.")
+        return redirect("home")
+    else:
+        return HttpResponse("No Post Request")

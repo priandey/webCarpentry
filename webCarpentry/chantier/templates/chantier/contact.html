@@ -3,23 +3,23 @@
   <main class="main-content">
     <div class="container-fluid photos">
       <div class="row justify-content-center">
-
+        
         <div class="col-md-6 pt-4"  data-aos="fade-up">
           <h2 class="text-white mb-4">Me contacter</h2>
 
           <div class="row">
             <div class="col-md-12">
               <p class="mb-5">N'hésitez pas à me contacter pour me poser vos questions</p>
-
+              
 
               <div class="row">
                 <div class="col-md-12">
 
+                  
 
-
-                  <form action="" method="post">
-
-
+                  <form action="{% url 'mail' %}" method="post">
+                    
+                    
 
                     <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
@@ -33,15 +33,15 @@
                     </div>
 
                     <div class="row form-group">
-
+                      
                       <div class="col-md-12">
-                        <label class="text-white" for="email">Email</label>
+                        <label class="text-white" for="email">Email</label> 
                         <input type="email" id="email" name="email" class="form-control">
                       </div>
                     </div>
 
                     <div class="row form-group">
-
+                      
                       <div class="col-md-12">
                         <label class="text-white" for="subject">Sujet</label>
                         <input type="subject" id="subject" name="subject" class="form-control">
@@ -50,7 +50,7 @@
 
                     <div class="row form-group mb-5">
                       <div class="col-md-12">
-                        <label class="text-white" for="message">Message</label>
+                        <label class="text-white" for="message">Message</label> 
                         <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Ecrivez ici votre message"></textarea>
                       </div>
                     </div>
@@ -64,7 +64,7 @@
                   {% csrf_token %}
                   </form>
                 </div>
-
+                
               </div>
             </div>
           </div>
