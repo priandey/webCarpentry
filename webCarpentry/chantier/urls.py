@@ -21,6 +21,4 @@ urlpatterns = [
     path('', views.index, name="home"),
     path('<int:pk>/', views.chantier, name="chantier"),
     path('bio/', views.bio, name="bio"),
-    # path('contact/', views.contact, name='contact'),
-    # path('mail/', views.send_email, name='mail')
 ]
