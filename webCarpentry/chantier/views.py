@@ -29,10 +29,9 @@ def send_email(request):
         message = request.POST['message']
         from_email = request.POST['email']
         try:
-            send_mail(subject, message, from_email, ["leo10e9@gmail.com"])
+            send_mail(subject, message, from_email, ["riandeypierre@gmail.com"])
         except BadHeaderError:
             return HttpResponse("Invalid Header Found.")
         return redirect("home")
     else:
         return HttpResponse("No Post Request")
-
