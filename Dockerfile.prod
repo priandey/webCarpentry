@@ -11,7 +11,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt && pip install 
 
 COPY . .
 
-RUN python webCarpentry/manage.py collectstatic --noinput
+RUN python webCarpentry/manage.py collectstatic
 
 EXPOSE 8000
 
