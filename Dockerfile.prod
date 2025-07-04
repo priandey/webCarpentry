@@ -11,8 +11,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt && pip install 
 
 COPY . .
 
-RUN python webCarpentry/manage.py collectstatic
-
 EXPOSE 8000
 
 CMD ["gunicorn", "webCarpentry.wsgi:application", "--bind", "0.0.0.0:8000"]
