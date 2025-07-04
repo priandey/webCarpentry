@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    command: gunicorn webCarpentry.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn webCarpentry.wsgi:application --bind 0.0.0.0:8057
     ports:
-      - "8000:8000"
+      - "8057:8057"
     depends_on: []
