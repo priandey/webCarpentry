@@ -1,0 +1,73 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$AEILjO1pgpuHdxaNDMCF4c$kk65T1/h4JlHTWPUWUS8h29YvBIV/TMOmK0rOvhc50w=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-01-01T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "chantier.chantier",
+    "pk": 1,
+    "fields": {
+      "name": "Rénovation Maison Bordeaux",
+      "description": "Rénovation complète d'une maison ancienne à Bordeaux.",
+      "date_of_work": "2023-05-15",
+      "upload_date": "2023-05-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "chantier.chantier",
+    "pk": 2,
+    "fields": {
+      "name": "Extension Bois Arcachon",
+      "description": "Extension en bois d'une villa à Arcachon.",
+      "date_of_work": "2023-07-10",
+      "upload_date": "2023-07-11T14:30:00Z"
+    }
+  },
+  {
+    "model": "chantier.picture",
+    "pk": 1,
+    "fields": {
+      "chantier": 1,
+      "picture": "images/sample1.jpg",
+      "description": "Façade rénovée.",
+      "thumbnail": "thumbnails/sample1_thumb.jpg",
+      "is_main": true
+    }
+  },
+  {
+    "model": "chantier.picture",
+    "pk": 2,
+    "fields": {
+      "chantier": 1,
+      "picture": "images/sample2.jpg",
+      "description": "Intérieur avant travaux.",
+      "thumbnail": "thumbnails/sample2_thumb.jpg",
+      "is_main": false
+    }
+  },
+  {
+    "model": "chantier.picture",
+    "pk": 3,
+    "fields": {
+      "chantier": 2,
+      "picture": "images/sample3.jpg",
+      "description": "Ossature bois en cours de montage.",
+      "thumbnail": "thumbnails/sample3_thumb.jpg",
+      "is_main": true
+    }
+  }
+]
