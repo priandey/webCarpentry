@@ -25,30 +25,23 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = (
-    False
-    if os.getenv("DEBUG", "True") == "False"
-    else True
-)
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PWD"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT"),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'postgres'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PWD', ''),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5433'),
     }
 }
 
-SECRET_KEY = '&nj!6wn2j-gjo90z^hsa#so866f)d+a0piu!&ovaltgnwwo#nw'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'unsafe-default')
 
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "leocharpente.fr", "www.leocharpente.fr"]
-CSRF_TRUSTED_ORIGINS = [
-    "https://leocharpente.fr",
-    "https://www.leocharpente.fr",
-]
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',')
+CSRF_TRUSTED_ORIGINS = [os.environ.get('CSRF_TRUSTED_ORIGINS', '')]
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,11 +125,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = os.getenv("STATIC_URL", '/static/')
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = os.getenv("MEDIA_URL", '/media/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = os.environ.get('STATIC_URL', '/static/')
+MEDIA_URL = os.environ.get('MEDIA_URL', '/media/')
+
+MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY', '')
+MAILGUN_API_URL = os.environ.get('MAILGUN_API_URL', '')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
