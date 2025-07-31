@@ -149,17 +149,22 @@ else:
         'access_key': os.environ.get('S3_ACCESS_KEY', ''),
         'secret_key': os.environ.get('S3_SECRET_KEY', ''),
         'region_name': S3_REGION_NAME,
-        'location': os.environ.get('S3_LOCATION', 'webCarpentry/'),
         'endpoint_url': f'https://s3.{S3_REGION_NAME}.scw.cloud/',
     }
     STORAGES = {
         'default': {
             'BACKEND': 'storages.backends.s3.S3Storage',
-            'OPTIONS': S3_OPTIONS,
+            'OPTIONS': {
+                **S3_OPTIONS,
+                'location': os.environ.get('S3_LOCATION', '') + 'media/',
+            },
         },
         'staticfiles': {
             'BACKEND': 'storages.backends.s3.S3Storage',
-            'OPTIONS': S3_OPTIONS,
+            'OPTIONS': {
+                **S3_OPTIONS,
+                'location': os.environ.get('S3_LOCATION', '') + 'static/',
+            },
         },
     }
 
