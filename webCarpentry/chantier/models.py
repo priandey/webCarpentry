@@ -82,5 +82,6 @@ class Picture(models.Model):
 
 
 @receiver(post_delete, sender=Picture)
-def submission_delete(sender, instance, **kwargs):
+def submission_delete(sender, instance: Picture, **kwargs):
     instance.picture.delete(False)
+    instance.thumbnail.delete(False)
