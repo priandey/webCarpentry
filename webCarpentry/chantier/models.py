@@ -42,6 +42,7 @@ class Picture(models.Model):
     is_main = models.BooleanField(default=False, verbose_name="Image de couverture")
 
     def thumbnailify(self):
+        logging.info("Creating thumbnail for %s", self.picture.name)
         try:
             # Open image and convert to RGB if necessary (handles PNG transparency)
             img = Image.open(self.picture)
