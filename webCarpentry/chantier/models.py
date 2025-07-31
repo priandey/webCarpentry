@@ -1,4 +1,6 @@
 from io import BytesIO
+import logging
+import os
 
 from django.utils.crypto import get_random_string
 from django.db import models
@@ -40,11 +42,35 @@ class Picture(models.Model):
     is_main = models.BooleanField(default=False, verbose_name="Image de couverture")
 
     def thumbnailify(self):
-        img = Image.open(self.picture)
-        img.thumbnail((6000, 300))
-        thumbnail_io = BytesIO()
-        img.save(thumbnail_io, 'JPEG', quality=85)
-        return File(thumbnail_io, name=get_random_string(length=70))
+        try:
+            # Open image and convert to RGB if necessary (handles PNG transparency)
+            img = Image.open(self.picture)
+            if img.mode in ('RGBA', 'LA', 'P'):
+                img = img.convert('RGB')
+
+            # Calculate aspect ratio preserving thumbnail
+            # Original dimensions: 6000x300 seems unusual - let's use more standard sizes
+            max_width, max_height = 800, 600
+
+            # Calculate new dimensions preserving aspect ratio
+            img.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
+
+            # Create thumbnail with optimized settings
+            thumbnail_io = BytesIO()
+            img.save(thumbnail_io, 'JPEG', quality=85, optimize=True)
+            thumbnail_io.seek(0)
+
+            # Generate filename with original extension
+            original_name = self.picture.name.split('/')[-1]
+            name, ext = os.path.splitext(original_name)
+            thumbnail_name = f"{name}_thumb{ext}"
+
+            return File(thumbnail_io, name=f"thumbnails/{thumbnail_name}")
+
+        except Exception as e:
+            # Log error and return None to prevent save failure
+            logging.error("Error creating thumbnail for %s: %s", self.picture.name, e)
+            return None
 
     def save(self, *args, **kwargs):
         self.thumbnail = self.thumbnailify()
@@ -57,5 +83,3 @@ class Picture(models.Model):
 @receiver(post_delete, sender=Picture)
 def submission_delete(sender, instance, **kwargs):
     instance.picture.delete(False)
-
-# TODO : vue contact
