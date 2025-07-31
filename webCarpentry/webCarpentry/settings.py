@@ -130,6 +130,39 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = os.environ.get('STATIC_URL', '/static/')
 MEDIA_URL = os.environ.get('MEDIA_URL', '/media/')
 
+# Storage configuration - use S3 in production, local in development
+if DEBUG:
+    # Local storage for development
+    STORAGES = {
+        'default': {
+            'BACKEND': 'django.core.files.storage.FileSystemStorage',
+        },
+        'staticfiles': {
+            'BACKEND': 'django.core.files.storage.FileSystemStorage',
+        },
+    }
+else:
+    # S3 storage for production
+    S3_REGION_NAME = os.environ.get('S3_REGION_NAME', 'fr-par')
+    S3_OPTIONS = {
+        'bucket_name': os.environ.get('S3_STORAGE_BUCKET_NAME', ''),
+        'access_key': os.environ.get('S3_ACCESS_KEY', ''),
+        'secret_key': os.environ.get('S3_SECRET_KEY', ''),
+        'region_name': S3_REGION_NAME,
+        'location': os.environ.get('S3_LOCATION', 'webCarpentry/'),
+        'endpoint_url': f'https://s3.{S3_REGION_NAME}.scw.cloud/',
+    }
+    STORAGES = {
+        'default': {
+            'BACKEND': 'storages.backends.s3.S3Storage',
+            'OPTIONS': S3_OPTIONS,
+        },
+        'staticfiles': {
+            'BACKEND': 'storages.backends.s3.S3Storage',
+            'OPTIONS': S3_OPTIONS,
+        },
+    }
+
 MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY', '')
 MAILGUN_API_URL = os.environ.get('MAILGUN_API_URL', '')
 
