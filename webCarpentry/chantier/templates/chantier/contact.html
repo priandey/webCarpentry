@@ -3,55 +3,88 @@
   <main class="main-content">
     <div class="container-fluid photos">
       <div class="row justify-content-center">
-        
+
         <div class="col-md-6 pt-4"  data-aos="fade-up">
           <h2 class="text-white mb-4">Me contacter</h2>
 
           <div class="row">
             <div class="col-md-12">
               <p class="mb-5">N'hésitez pas à me contacter pour me poser vos questions</p>
-              
+
+              <style>
+                .form-field {
+                  position: absolute !important;
+                  left: -9999px !important;
+                  width: 1px !important;
+                  height: 1px !important;
+                  opacity: 0 !important;
+                  pointer-events: none !important;
+                }
+                .form-label {
+                  position: absolute !important;
+                  left: -9999px !important;
+                  width: 1px !important;
+                  height: 1px !important;
+                  opacity: 0 !important;
+                  pointer-events: none !important;
+                }
+              </style>
 
               <div class="row">
                 <div class="col-md-12">
 
-                  
+
 
                   <form action="{% url 'mail' %}" method="post">
-                    
-                    
+
+                    <div class="form-field">
+                      <label for="website" class="form-label" required>Website</label>
+                      <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-field">
+                      <label for="pronouns" class="form-label" required>Pronouns</label>
+                      <input type="text" name="pronouns" id="pronouns" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-field">
+                      <input type="submit" name="submit" value="Submit" tabindex="-1">
+                    </div>
+
+
+                    <input type="hidden" name="timestamp" value="{{ timestamp|default:'' }}">
 
                     <div class="row form-group">
                       <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-white" for="fname">Nom</label>
-                        <input type="text" id="fname" name="fname" class="form-control">
+                        <input type="text" id="fname" name="fname" class="form-control" required>
                       </div>
                       <div class="col-md-6">
                         <label class="text-white" for="lname">Prénom</label>
-                        <input type="text" id="lname" name="lname" class="form-control">
+                        <input type="text" id="lname" name="lname" class="form-control" required>
                       </div>
                     </div>
 
                     <div class="row form-group">
-                      
+
                       <div class="col-md-12">
-                        <label class="text-white" for="email">Email</label> 
-                        <input type="email" id="email" name="email" class="form-control">
+                        <label class="text-white" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
                       </div>
                     </div>
 
                     <div class="row form-group">
-                      
+
                       <div class="col-md-12">
                         <label class="text-white" for="subject">Sujet</label>
-                        <input type="subject" id="subject" name="subject" class="form-control">
+                        <input type="subject" id="subject" name="subject" class="form-control" required>
                       </div>
                     </div>
 
                     <div class="row form-group mb-5">
                       <div class="col-md-12">
-                        <label class="text-white" for="message">Message</label> 
-                        <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Ecrivez ici votre message"></textarea>
+                        <label class="text-white" for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Ecrivez ici votre message" required></textarea>
                       </div>
                     </div>
 
@@ -64,7 +97,7 @@
                   {% csrf_token %}
                   </form>
                 </div>
-                
+
               </div>
             </div>
           </div>
